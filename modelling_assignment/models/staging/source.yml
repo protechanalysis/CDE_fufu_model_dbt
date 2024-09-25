@@ -1,0 +1,84 @@
+version: 2
+
+sources:
+  - name: modeling_fufu
+    description: ""
+    tables:
+      - name: menu
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: name
+            data_type: varchar
+            description: ""
+          - name: description
+            data_type: varchar
+            description: ""
+          - name: base_price
+            data_type: number
+            description: ""
+          - name: outlet_id
+            data_type: number
+            description: ""
+
+      - name: orders
+        description: ""
+        columns:
+          - name: order_id
+            data_type: number
+            description: ""
+          - name: menu_item_id
+            data_type: number
+            description: ""
+          - name: outlet_id
+            data_type: number
+            description: ""
+          - name: order_type
+            data_type: varchar
+            description: ""
+          - name: quantity
+            data_type: number
+            description: ""
+          - name: unit_price
+            data_type: number
+            description: ""
+          - name: subtotal
+            data_type: number
+            description: ""
+          - name: order_date
+            data_type: varchar
+            description: ""
+
+      - name: outlet
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: location
+            data_type: varchar
+            description: ""
+
+      - name: payment
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: order_id
+            data_type: number
+            description: ""
+          - name: method
+            data_type: varchar
+            description: ""
+          - name: mode
+            data_type: varchar
+            description: ""
+          - name: amount
+            data_type: number
+            description: ""
+          - name: payment_date
+            data_type: datetime2
+            description: ""
