@@ -1,6 +1,14 @@
 id,name,description,base_price,outlet_id
-1,Jollof Rice,Spicy rice dish cooked with tomatoes,800,"1,2,3"
-2,Pounded Yam,Smooth yam paste served with soup,700,"1,2,3"
-3,Suya,Spicy grilled meat,500,"1,2,3"
-4,Egusi Soup,Soup made with ground melon seeds,600,"1,3"
-5,Chicken Burger,Grilled chicken patty with lettuce and tomato,900,"1,2"
+1,Jollof Rice,Spicy rice dish cooked with tomatoes,800,1
+1,Jollof Rice,Spicy rice dish cooked with tomatoes,800,2
+1,Jollof Rice,Spicy rice dish cooked with tomatoes,800,3
+2,Pounded Yam,Smooth yam paste served with soup,700,1
+2,Pounded Yam,Smooth yam paste served with soup,700,2
+2,Pounded Yam,Smooth yam paste served with soup,700,3
+3,Suya,Spicy grilled meat,500,1
+3,Suya,Spicy grilled meat,500,2
+3,Suya,Spicy grilled meat,500,3
+4,Egusi Soup,Soup made with ground melon seeds,600,1
+4,Egusi Soup,Soup made with ground melon seeds,600,3
+5,Chicken Burger,Grilled chicken patty with lettuce and tomato,900,1
+5,Chicken Burger,Grilled chicken patty with lettuce and tomato,900,2
