@@ -10,5 +10,5 @@ To automate access for the user (Joseph) to new tables/models created in dbt, po
 
 ```
 +post-hook:
-    #     sql: "GRANT SELECT ON {{ this }} TO joseph"
+    sql: "GRANT SELECT ON {{ this }} TO joseph"
 ```
