@@ -1,0 +1,117 @@
+version: 2
+
+sources:
+  - name: modeling_fufu
+    description: ""
+    tables:
+      - name: menu
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+          - name: name
+            data_type: varchar
+            description: ""
+          - name: description
+            data_type: varchar
+            description: ""
+          - name: base_price
+            data_type: number
+            description: ""
+            tests:
+              - not_null
+          - name: outlet_id
+            data_type: number
+            description: ""
+
+        freshness: # make this a little more strict
+          warn_after: {count: 6, period: hour}
+          error_after: {count: 12, period: hour}
+        
+              
+
+      - name: orders
+        description: ""
+        columns:
+          - name: order_id
+            data_type: number
+            description: ""
+          - name: menu_item_id
+            data_type: number
+            description: ""
+          - name: outlet_id
+            data_type: number
+            description: ""
+          - name: order_type
+            data_type: varchar
+            description: ""
+          - name: quantity
+            data_type: number
+            description: ""
+            tests:
+              - not_null
+          - name: unit_price
+            data_type: number
+            description: ""
+          - name: subtotal
+            data_type: number
+            description: ""
+            tests:
+              - not_null
+          - name: order_date
+            data_type: varchar
+            description: ""
+
+        freshness: # make this a little more strict
+          warn_after: {count: 6, period: hour}
+          error_after: {count: 12, period: hour}
+        
+
+      - name: outlet
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+            tests:
+              - not_null
+              - unique
+          - name: location
+            data_type: varchar
+            description: ""
+
+      - name: payment
+        description: ""
+        columns:
+          - name: id
+            data_type: number
+            description: ""
+            tests:
+              - unique
+              - not_null
+          - name: order_id
+            data_type: number
+            description: ""
+            tests:
+              - unique
+              - not_null
+          - name: method
+            data_type: varchar
+            description: ""
+          - name: mode
+            data_type: varchar
+            description: ""
+          - name: amount
+            data_type: number
+            description: ""
+            tests:
+              - not_null
+          - name: payment_date
+            data_type: varchar
+            description: ""
+
+        freshness: # make this a little more strict
+          warn_after: {count: 6, period: hour}
+          error_after: {count: 12, period: hour}
+          

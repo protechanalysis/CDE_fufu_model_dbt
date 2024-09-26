@@ -1,0 +1,6 @@
+id,order_id,method,mode,amount,payment_date
+1,1,Debit Card,Pos,2900,9/25/24 12:45
+2,2,Cash,cash,1700,9/25/24 13:20
+3,3,Online,paystack,2100,9/25/24 18:50
+4,4,Debit Card,Pos,2200,9/25/24 20:00
+5,5,Online,Paystack,1600,9/25/24 20:05
