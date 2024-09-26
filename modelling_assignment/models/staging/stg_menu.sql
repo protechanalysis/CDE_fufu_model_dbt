@@ -1,3 +1,5 @@
+--- creating staging model for menu
+
 with menu_list as (
     select *
     from {{ source('modeling_fufu','menu') }}

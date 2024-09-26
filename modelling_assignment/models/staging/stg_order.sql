@@ -1,14 +1,23 @@
+--- creating staging model for orders
+
 with ordering as (
     select *
     from {{ source('modeling_fufu','orders') }}
 ),
 
-final as (
+
+order_rename as (
     select *, subtotal as amount
     from ordering
+),
+
+order_select as (
+    select order_id, menu_item_id as menu_id,
+     outlet_id, order_type, 
+     quantity, unit_price, amount, order_date
+    from order_rename
 )
 
-select order_id, menu_item_id, outlet_id, order_type, quantity, amount, 
-    cast(order_date as datetime)
-from final
+select *
+from order_select
 

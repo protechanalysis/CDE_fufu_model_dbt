@@ -34,3 +34,11 @@ models:
     # Config indicated by + and applies to all files under models/example/
     example:
       +materialized: view
+
+    # configuring user access to models
+    # staging:
+    #   +post-hook:
+    #     sql: "GRANT SELECT ON {{ this }} TO joseph"
+    # final:
+    #   +post-hook:
+    #     sql: "GRANT SELECT ON {{ this }} TO joseph"
